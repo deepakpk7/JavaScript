@@ -187,12 +187,61 @@ function price(){
 }
 
 
-// # unit=int(input("Enter Units : "))
-// # if unit<=100:
-// #     print("No charge")
-// # elif unit<=200:
-// #     b=(unit-100)*5
-// #     print(b)
-// # else :
-// #     b=(unit-200)*10+500
-// #     print(b
+// function num(){
+//     let n=document.getElementById('n').value
+
+//     for(i=1;i<=n;i++){
+//         console.log(i); 
+//     }
+
+//     let i=1
+//     while (i<=n){
+//         console.log(i); 
+//         i++
+//     }
+
+//     let i=1
+//     do{
+//         console.log(i);
+//         i++  
+//     }
+//     while(i<=n)
+
+// }
+
+function numbers(){
+    let s=document.getElementById('s').value
+    let e=document.getElementById('e').value
+
+    for(let i=s;i<=e;i++){
+        if(i%2==0){
+            console.log(i);
+        }
+    }
+
+}
+function mul(){
+    let m=document.getElementById('mul').value
+    // for(let i=1;i<=10;i++){
+    //     console.log(i,'*',m,'=',i*m);
+        
+    // }
+    let i=1
+    do{
+        console.log(i,'*',m,'=',i*m);
+        i++
+    }
+    while(i<=10)
+}
+function sum(){
+
+    let s=document.getElementById('s').value
+    let e=document.getElementById('e').value
+    let even=0
+    for(let i=s;i<=e;i++){
+        if (i%2==0){
+            even+=i
+        }  
+    }
+    console.log(even);
+}
