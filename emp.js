@@ -1,4 +1,4 @@
-let data=[{id:'1',name:'anu',age:22},{id:'2',name:'aanu',age:12},{id:'3',name:'manu',age:22,}]
+let data =[]
 
 function display(){
     let tbody= document.querySelector("tbody")
@@ -14,9 +14,13 @@ function display(){
         name_td.innerHTML=user.name
         tr.appendChild(name_td)
 
-        let age_td=document.createElement("td")
-        age_td.innerHTML=user.age
-        tr.appendChild(age_td)
+        let position_td=document.createElement("td")
+        position_td.innerHTML=user.position
+        tr.appendChild(position_td)
+        
+        let salary_td=document.createElement("td")
+        salary_td.innerHTML=user.salary
+        tr.appendChild(salary_td)
 
         let edit_td = document.createElement("td")
         let edit_btn = document.createElement("button")
@@ -54,7 +58,9 @@ function edit_form(id){
     let edit = data.find((user)=>user.id==id)
     document.getElementById("e_id").value=edit.id
     document.getElementById("e_name").value=edit.name
-    document.getElementById("e_age").value=edit.age
+    document.getElementById("e_position").value=edit.position
+    document.getElementById("e_salary").value=edit.salary
+
     edit_data = id
 }
 
@@ -62,11 +68,12 @@ document.getElementById("edit_form").addEventListener("submit",function(event){
     event.preventDefault()
     let id = document.getElementById("e_id").value
     let name = document.getElementById("e_name").value
-    let age = document.getElementById("e_age").value
+    let position = document.getElementById("e_position").value
+    let salary = document.getElementById("e_salary").value
 
     data = data.map((user)=>{
         if(user.id==edit_data){
-            return{...user,id:id,name:name,age:age}
+            return{...user,id:id,name:name,position:position,salary:salary}
         }
         return user
     })
@@ -83,13 +90,15 @@ document.getElementById("add_form").addEventListener('submit',function(event){
     event.preventDefault()
     let id = document.getElementById("id").value
     let name = document.getElementById("name").value
-    let age = document.getElementById("age").value
-    data.push({id:id,name:name,age:age})
+    let position = document.getElementById("position").value
+    let salary = document.getElementById("salary").value
+    data.push({id:id,name:name,position:position,salary:salary})
 
 
     document.getElementById("id").value=''
     document.getElementById("name").value=''
-    document.getElementById("age").value=''
+    document.getElementById("position").value=''
+    document.getElementById("salary").value=''
     display()
 
 
@@ -97,3 +106,6 @@ document.getElementById("add_form").addEventListener('submit',function(event){
 
 
 display()
+
+
+  

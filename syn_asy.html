@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="time"></h2>
+    <img src="../pexels-njeromin-29254310.jpg" id="img" alt="" style="width: 400px;height: 400px;">
+    <script>
+        // Synchornous
+        // console.log('start');
+        // for(i=0;i<=1000;i++){
+        //     console.log(i);
+        // }
+        // console.log('end');
+        
+        // Asynchornous
+        // console.log('start');
+        // setTimeout(()=>{
+        //     console.log('inside');
+        // },2000)
+        // console.log('end');
+
+
+        // let count=10
+        // let data=setInterval(() => {
+        //     document.getElementById("time").innerHTML=count
+        //     console.log(count);
+        //     count--
+        //     if(count<0){
+        //         clearInterval(data)
+        //     }
+        // },1000);
+
+        // let min=2
+        // let sec=59
+        // let data=setInterval(()=>{
+        //     document.getElementById("time").innerHTML=min+':'+sec
+        //     sec--
+        //     if(sec<0){
+        //         min--
+        //         sec=59
+        //         if(min<0){
+        //             clearInterval(data)
+        //         }
+        //     }
+        // },100)
+
+        let sec=2
+        let img=document.getElementById("img")
+        let data=setInterval(()=>{
+            document.getElementById("time").innerHTML=sec
+            sec--
+            if(sec<0){
+                document.getElementById("img").style.display='none'
+                clearInterval(data)
+            }
+        },1000)
+        
+        
+        
+    </script>
+</body>
+</html>

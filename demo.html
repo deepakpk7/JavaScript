@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #edit_form{
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <table>
@@ -16,6 +21,18 @@
 
         </tbody>   
     </table>
+    <form id="add_form">
+        <input type="text" name="" id="id" placeholder="Enter Id">
+        <input type="text" name="" id="name" placeholder="Enter Name">
+        <input type="number" name="" id="age" placeholder="Age">
+        <input type="submit" value="Add">
+    </form>
+    <form id="edit_form">
+        <input type="text" name="" id="e_id" placeholder="Enter Id">
+        <input type="text" name="" id="e_name" placeholder="Enter Name">
+        <input type="number" name="" id="e_age" placeholder="Age">
+        <input type="submit" value="Update">
+    </form>
 
     <script src="demo.js"></script>
 </body>

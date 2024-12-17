@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           color: rgb(17, 17, 17);
+           display: block;
+       }
+       #edit_form{
+           display:none;
+       }
+       table, th, td {
+           border: 4px solid rgb(21, 115, 128);
+           padding: 15px;
+           border-collapse: collapse;
+   
+       }
+       h1{
+           text-align: center;
+           text-decoration: underline;
+   
+       }
+     
+       th{
+           background-color: rgb(9, 140, 254);
+           color: white;
+           font-size: 20px;
+       }
+       input{
+           margin: 10px;
+           padding: 10px;
+           border-radius: 10px;
+       }
+       button{
+           margin: 10px;
+           padding: 10px;
+           border-radius: 10px;
+           background-color: rgba(8, 8, 8, 0.884);
+           color: white;
+       }
+       #add_form{
+           margin-top: 50px;
+           color: black;
+       }
+   </style>
+   
+</head>
+<body>
+    <h1>Employee Mangement</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Position</td>
+                <td>Salary</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <form id="add_form" action="">
+        <input type="text" name="" id="id" placeholder="Enter employee id">
+        <input type="text" name="" id="name" placeholder="Enter employee name">
+        <input type="text" name="" id="position" placeholder="Enter employee position">
+        <input type="number" name="" id="salary" placeholder="Enter employee salary">
+        <input type="submit" value="Add">
+
+    </form><br><br>
+
+    <form id="edit_form" action="">
+        <input type="text" name="" id="e_id" placeholder="Enter employee id">
+        <input type="text" name="" id="e_name" placeholder="Enter employee name">
+        <input type="text" name="" id="e_position" placeholder="Enter employee position">
+        <input type="number" name="" id="e_salary" placeholder="Enter employee salary">
+        <input type="submit" value="Update">
+
+    </form>
+    <script src="emp.js"></script>
+</body>
+</html>
