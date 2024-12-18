@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="" id="form">
+        <input type="tel" name="" id="no" placeholder="Enter mobile number" required pattern="^[6-9]\d{9}">
+        <input type="password" name="" id="" placeholder="enter password" required pattern="^[A-Z0-9].*[!@#$%&0-9]">
+        <input type="submit" value="Add">
+    </form> -->
+
+    <form action="" id="form">
+        <input type="tel" name="" id="no" placeholder="Enter mobile number" required>
+        <input type="password" name="" id="pass" placeholder="enter password" required>
+        <p id="a1"></p>
+        <p id="a2"></p>
+        <input type="submit" value="Add">
+    </form> 
+    <script>
+        document.getElementById("form").addEventListener("submit",function(event){
+            event.preventDefault()
+            let no=document.getElementById("no").value
+            let a1=document.getElementById("a1")
+            let a2=document.getElementById("a2")
+
+            let pass=document.getElementById("pass").value
+            if(/^[6-9]\d{9}/.test(no)){
+                a1.innerHTML="Valid"
+            }
+            else{
+                a1.innerHTML="invalid"
+            }
+            if(/^[A-z0-9].*[!@#$%&0-9]/.test(pass)){
+                a2.innerHTML="Password valid"
+            }
+            else{
+                a2.innerHTML="Password invalid"
+            }
+        }
+        )
+    </script>
+
+</body>
+</html>
