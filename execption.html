@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // try{
+        //     console.log('a');
+        // }
+        // catch(error){
+        //     console.log('error',error.message);
+            
+        // }
+        // finally{
+        //     console.log("program end");       
+        // }
+
+
+        // ------------OOPS---------------
+
+        // class std{
+        //     constructor(){
+        //         console.log('demo data');
+        //     }
+        //     display(){
+        //         console.log('display');
+                
+        //     }
+        // }
+        // let s1= new std
+        // s1.display()
+
+     //    class std{
+     //        constructor(name){
+     //            this.name=name
+     //            console.log('demo data');
+     //        }
+     //        display(age){
+     //            console.log('display',this.name,age);    
+     //        }
+     //    }
+     //    let s1= new std('anu')
+     //    s1.display(22)
+
+     //    Single Inheritances
+
+     class School{
+          constructor(){
+               console.log('school class');
+          }
+          classroom(){
+               console.log('class rooms');
+          }
+     }
+     class std extends School{
+          constructor(name){
+               super()
+               this.name=name
+               console.log('demo');               
+          }
+          display(age){
+               console.log('display',this.name,age);
+          }
+     }
+     let std1=new std('anu')
+     std1.display(22)
+     std1.classroom()
+    </script>
+</body>
+</html>
